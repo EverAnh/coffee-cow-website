@@ -16,12 +16,12 @@ class BottomSection extends React.Component {
   constructor() {
     super();
     this.timer = 0;
-    this.state = { target: dayjs('2023-10-09T17:17:39.000Z'), now: {} };
+    this.state = { diff: 0 };
     this.tick = this.tick.bind(this);
   }
 
   componentDidMount() {
-    this.setState({now: dayjs() });
+    this.setState({diff: dayjs('2023-10-09T17:17:39.000Z').diff(dayjs())});
     this.timer = setInterval(this.tick, 1000);
   }
 
@@ -30,8 +30,7 @@ class BottomSection extends React.Component {
   }
 
   tick() {
-    this.timer = setInterval(this.tick, 1000);
-    this.setState({ now: dayjs() });
+    this.setState({ diff: this.state.diff - 1000 });
   }
 
   render() {
@@ -47,15 +46,14 @@ class BottomSection extends React.Component {
               Time until 1.5 years has passed:
             </Typography>
             <Typography variant="h4">
-              {dayjs.duration(this.state.target.diff(this.state.now)).years() + " year " 
-              + dayjs.duration(this.state.target.diff(this.state.now)).months() + " months " 
-              + dayjs.duration(this.state.target.diff(this.state.now)).days() + " days " 
-              + dayjs.duration(this.state.target.diff(this.state.now)).hours() + " hours " 
-              + dayjs.duration(this.state.target.diff(this.state.now)).minutes() + " minutes " 
-              + dayjs.duration(this.state.target.diff(this.state.now)).seconds() + " seconds"}
+              {dayjs.duration(this.state.diff).years() + " year " 
+              + dayjs.duration(this.state.diff).months() + " months " 
+              + dayjs.duration(this.state.diff).days() + " days " 
+              + dayjs.duration(this.state.diff).hours() + " hours " 
+              + dayjs.duration(this.state.diff).minutes() + " minutes " 
+              + dayjs.duration(this.state.diff).seconds() + " seconds"}
             </Typography>
           </Stack>
-          <Divider light />
         </Container>
         <Typography variant="subtitle1" align="right" sx={{mr: 8}}>
           Site made by /u/EverAnh
