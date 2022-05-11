@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -46,9 +47,17 @@ export default function Layout({children, title}) {
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> 
-<link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> 
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XPLNM2KYK7" />
+        <Script>
+          {`window.dataLayer = window.dataLayer || [];`}
+          {`function gtag(){dataLayer.push(arguments);`}
+          {`gtag('js', new Date());`}
+
+          {`gtag('config', 'G-XPLNM2KYK7');`}
+        </Script>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
