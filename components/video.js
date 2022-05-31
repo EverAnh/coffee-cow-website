@@ -22,6 +22,7 @@ export default function Video(props) {
               src="/images/youtube-video-icon-3.jpg"
               width="500"
               height="320"
+              alt="icon for an embedded YouTube video"
             />
           </Link>
         </Stack>
