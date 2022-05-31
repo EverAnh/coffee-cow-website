@@ -42,10 +42,10 @@ class BottomSection extends React.Component {
       }}>
         <Container>
           <Stack direction="column" spacing={0} sx={{justifyContent: "center", alignItems: "center", pb: 8}}>
-            <Typography variant="h5" gutterBottom color="#d6d6d6">
+            <Typography variant="h6" gutterBottom color="#d6d6d6">
               Time until 1.5 years has passed:
             </Typography>
-            <Typography variant="h4">
+            <Typography variant="h5">
               {dayjs.duration(this.state.diff).years() + " year " 
               + dayjs.duration(this.state.diff).months() + " months " 
               + dayjs.duration(this.state.diff).days() + " days " 
@@ -55,7 +55,7 @@ class BottomSection extends React.Component {
             </Typography>
           </Stack>
         </Container>
-        <Typography variant="subtitle1" align="right" sx={{mr: 8}}>
+        <Typography variant="subtitle2" align="right" sx={{mr: 8}}>
           Site made by /u/EverAnh
         </Typography>
       </Paper>
