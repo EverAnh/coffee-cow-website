@@ -4,6 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
+import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
@@ -81,12 +82,16 @@ export default function TopNav({isFrontPage}) {
           </Link>
         </Box>
         <Stack direction="row" spacing={2} sx={{ alignSelf: 'flex-end' }}>
-          <Avatar sx={{ bgcolor: "#222", width: "48px", height: "48px" }}>
-            <LoginIcon fontSize="medium" />
-          </Avatar>
-          <Avatar sx={{ bgcolor: "#222", width: "48px", height: "48px" }}>
-            <ShoppingCartIcon fontSize="medium" />
-          </Avatar>
+          <Tooltip title="This button is fake." arrow>
+            <Avatar sx={{ bgcolor: "#222", width: "48px", height: "48px" }}>
+              <LoginIcon fontSize="medium" />
+            </Avatar>
+          </Tooltip>
+          <Tooltip title="This button is fake." arrow>
+            <Avatar sx={{ bgcolor: "#222", width: "48px", height: "48px" }}>
+              <ShoppingCartIcon fontSize="medium" />
+            </Avatar>
+          </Tooltip>
         </Stack>
       </Toolbar>
     </AppBar>
