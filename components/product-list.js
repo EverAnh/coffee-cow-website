@@ -7,7 +7,7 @@ import ProductCard from '../components/product-card';
 
 export default function ProductList(props) {
   return (
-    <Container id="products-anchor" sx={{my: 12}}>
+    <Container id="products" sx={{my: 12}}>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={12} md={4}>
           <ProductCard 

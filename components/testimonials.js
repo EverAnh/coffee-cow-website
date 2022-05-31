@@ -9,7 +9,7 @@ import Divider from '@mui/material/Divider'
 
 export default function Testimonials(props) {
   return (
-    <Paper id="testimonials-anchor" sx={{py: 4}}>
+    <Paper id="testimonials" sx={{py: 4}}>
     <Container sx={{my: 2}}>
       <Typography component="h1" variant="h3" gutterBottom align="center" sx={{fontFamily: 'Oxygen, sans-serif'}}>
         Testimonials

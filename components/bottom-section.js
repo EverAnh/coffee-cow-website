@@ -35,7 +35,7 @@ class BottomSection extends React.Component {
 
   render() {
     return(
-      <Paper id="countdown-anchor" sx={{
+      <Paper id="countdown" sx={{
         backgroundImage: 'url(../images/coffee_cup_pattern.png)',
         color: '#efe9e3',
         py: 8,

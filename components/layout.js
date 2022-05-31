@@ -4,8 +4,6 @@ import Script from 'next/script'
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import TopNav from '../components/topnav'
-
 const theme = createTheme({
   palette: {
     mode: 'light',
@@ -61,7 +59,6 @@ export default function Layout({children, title}) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-          <TopNav />
           {children}
       </ThemeProvider>
     </>

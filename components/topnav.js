@@ -12,15 +12,15 @@ import LoginIcon from '@mui/icons-material/Login';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 
-export default function TopNav() {
+export default function TopNav({isFrontPage}) {
 
   return (
     <AppBar
         position="absolute"
-        color="transparent"
+        color={isFrontPage ? "transparent" : "primary"}
         elevation={0}
     >
-      <Toolbar sx={{py: 3}} id="back-to-top-anchor">
+      <Toolbar sx={{py: 3}} id="top">
         <Image
           src="/images/logo_cowface.png"
           alt="Coffee Cow Logo"
@@ -32,7 +32,7 @@ export default function TopNav() {
         <Box sx={{ flexGrow: 1 }}>
           <Link
             variant="button"
-            href="#products-anchor"
+            href="/#products"
             color="#d6d6d6"
             fontSize="large"
             sx={{ my: 1, ml: 3, mr: 1.5 }}
@@ -41,7 +41,7 @@ export default function TopNav() {
           </Link>
           <Link
             variant="button"
-            href="#testimonials-anchor"
+            href="/#testimonials"
             color="#d6d6d6"
             fontSize="large"
             sx={{ my: 1, mx: 1.5 }}
@@ -50,7 +50,7 @@ export default function TopNav() {
           </Link>
           <Link
             variant="button"
-            href="#explainer-anchor"
+            href="/#explainer"
             color="#d6d6d6"
             fontSize="large"
             sx={{ my: 1, mx: 1.5 }}
@@ -59,12 +59,21 @@ export default function TopNav() {
           </Link>
           <Link
             variant="button"
-            href="#countdown-anchor"
+            href="/#countdown"
             color="#d6d6d6"
             fontSize="large"
             sx={{ my: 1, mx: 1.5 }}
           >
             Countdown
+          </Link>
+          <Link
+            variant="button"
+            href="/art"
+            color="#d6d6d6"
+            fontSize="large"
+            sx={{ my: 1, mx: 1.5 }}
+          >
+            Art
           </Link>
         </Box>
         <Stack direction="row" spacing={2} sx={{ alignSelf: 'flex-end' }}>
