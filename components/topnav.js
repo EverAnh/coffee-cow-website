@@ -21,14 +21,18 @@ export default function TopNav({isFrontPage}) {
         elevation={0}
     >
       <Toolbar sx={{py: 3}} id="top">
-        <Image
-          src="/images/logo_cowface.png"
-          alt="Coffee Cow Logo"
-          width="62"
-          height="32"
-          position="relative"
-          sx={{ flexShrink: 0 }}
-        />
+        <Link
+          href="/#home"
+        >
+          <Image
+            src="/images/logo_cowface.png"
+            alt="Coffee Cow Logo"
+            width="62"
+            height="32"
+            position="relative"
+            sx={{ flexShrink: 0 }}
+          />
+        </Link>
         <Box sx={{ flexGrow: 1 }}>
           <Link
             variant="button"

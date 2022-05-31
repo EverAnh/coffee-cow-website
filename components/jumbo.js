@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 export default function Jumbo(props) {
   return (
-    <Grid container component="main">
+    <Grid container component="main" id="home">
       <Grid item xs={12} sm={8} md={6}>
         <Stack
           direction="column"
