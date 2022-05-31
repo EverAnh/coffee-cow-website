@@ -17,7 +17,7 @@ export default function Video(props) {
             Explainer Video
           </Typography>
           <Divider sx={{my: 2}} />
-          <Link href="https://www.youtube.com/watch?v=rRPQs_kM_nw">
+          <Link href="https://www.youtube.com/watch?v=IR2_TDzzkKY">
             <Image
               src="/images/youtube-video-icon-3.jpg"
               width="500"
