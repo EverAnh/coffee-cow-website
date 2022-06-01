@@ -4,6 +4,7 @@ import Jumbo from '../components/jumbo'
 import ProductList from '../components/product-list'
 import Testimonials from '../components/testimonials'
 import Video from '../components/video'
+import ArtRedirect from '../components/art-redirect'
 import BottomSection from '../components/bottom-section'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductList />
       <Testimonials />
       <Video />
+      <ArtRedirect />
       <BottomSection />
     </Layout>
   )

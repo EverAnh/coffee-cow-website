@@ -10,7 +10,7 @@ import Stack from '@mui/material/Stack';
 
 export default function Video(props) {
   return (
-    <Paper id="explainer" sx={{pt: 4, pb: 8}}>
+    <Paper id="explainer" sx={{p: 4}}>
       <Container sx={{my: 2}}>
         <Stack direction="column" spacing={0} sx={{justifyContent: "center", alignItems: "center"}}>
           <Typography component="h1" variant="h3" gutterBottom align="center" sx={{fontFamily: 'Oxygen, sans-serif'}}>
