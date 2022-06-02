@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -48,6 +49,18 @@ export default function Layout({children, title}) {
         <CssBaseline />
           {children}
       </ThemeProvider>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-XPLNM2KYK7"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XPLNM2KYK7');
+        `}
+      </Script>
     </>
   )
 }
