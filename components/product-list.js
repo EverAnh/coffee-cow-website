@@ -41,7 +41,7 @@ export default function ProductList(props) {
         </Grid>
         <Grid item xs={12}>
           <Alert severity='info' color='secondary' sx={{justifyContent: 'center'}}>
-            <Typography fontSize='medium'>
+            <Typography sx={{mt: -0.3}}>
               DISCOUNT CODE: MOOARKETING
             </Typography>
           </Alert>
