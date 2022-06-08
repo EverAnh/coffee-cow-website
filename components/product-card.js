@@ -22,8 +22,8 @@ export default function ProductCard(props) {
             image={props.img}
             alt="random"
           />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+          <CardContent sx={{p: 1, ml: 1}}>
+            <Typography variant="h6" component="h2">
               {props.productName}
             </Typography>
             <Typography>
