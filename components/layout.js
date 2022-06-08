@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Script from 'next/script'
 
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles'
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
@@ -38,6 +38,7 @@ const theme = createTheme({
     ].join(',')
   }
 });
+theme = responsiveFontSizes(theme);
 
 export default function Layout({children, title}) {
   return (
@@ -50,10 +51,10 @@ export default function Layout({children, title}) {
           {children}
       </ThemeProvider>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-XPLNM2KYK7"
-        strategy="afterInteractive"
+        src='https://www.googletagmanager.com/gtag/js?id=G-XPLNM2KYK7'
+        strategy='afterInteractive'
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id='google-analytics' strategy='afterInteractive'>
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
