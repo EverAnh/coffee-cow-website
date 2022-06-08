@@ -5,11 +5,11 @@ var duration = require('dayjs/plugin/duration')
 dayjs.extend(duration)
 
 import Container from '@mui/material/Container'
-import Paper from '@mui/material/Paper'
-import Typography from '@mui/material/Typography'
-import Stack from '@mui/material/Stack'
-import Grid from '@mui/material/Grid'
 import Divider from '@mui/material/Divider'
+import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
 
 class BottomSection extends React.Component {
 
@@ -35,27 +35,27 @@ class BottomSection extends React.Component {
 
   render() {
     return(
-      <Paper id="countdown" sx={{
+      <Paper id='countdown' sx={{
         backgroundImage: 'url(../images/coffee_cup_pattern.png)',
         color: '#efe9e3',
         py: 8,
       }}>
         <Container>
-          <Stack direction="column" spacing={0} sx={{justifyContent: "center", alignItems: "center", pb: 8}}>
-            <Typography variant="h6" gutterBottom color="#d6d6d6">
+          <Stack direction='column' spacing={0} sx={{justifyContent: 'center', alignItems: 'center', pb: 8}}>
+            <Typography variant='h6' gutterBottom color='#d6d6d6'>
               Time until 1.5 years has passed:
             </Typography>
-            <Typography variant="h5">
-              {dayjs.duration(this.state.diff).years() + " year " 
-              + dayjs.duration(this.state.diff).months() + " months " 
-              + dayjs.duration(this.state.diff).days() + " days " 
-              + dayjs.duration(this.state.diff).hours() + " hours " 
-              + dayjs.duration(this.state.diff).minutes() + " minutes " 
-              + dayjs.duration(this.state.diff).seconds() + " seconds"}
+            <Typography variant='h5' align='center'>
+              {dayjs.duration(this.state.diff).years() + ' year ' 
+              + dayjs.duration(this.state.diff).months() + ' months ' 
+              + dayjs.duration(this.state.diff).days() + ' days '
+              + dayjs.duration(this.state.diff).hours() + ' hours ' 
+              + dayjs.duration(this.state.diff).minutes() + ' minutes ' 
+              + dayjs.duration(this.state.diff).seconds() + ' seconds'}
             </Typography>
           </Stack>
         </Container>
-        <Typography variant="subtitle2" align="right" sx={{mr: 8}}>
+        <Typography variant='subtitle2' align='right' sx={{mr: 8}}>
           Site made by /u/EverAnh
         </Typography>
       </Paper>
