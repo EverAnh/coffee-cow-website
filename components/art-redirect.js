@@ -11,11 +11,11 @@ export default function ArtRedirect(props) {
   return (
     <Paper sx={{pt: 4, pb: 8}}>
       <Container sx={{my: 2}}>
-        <Stack direction="column" spacing={0} sx={{justifyContent: "center", alignItems: "center"}}>
-          <Typography component="h1" variant="h3" gutterBottom align="center" sx={{fontFamily: 'Oxygen, sans-serif'}}>
+        <Stack direction='column' spacing={0} sx={{justifyContent: 'center', alignItems: 'center'}}>
+          <Typography component='h1' variant='h3' gutterBottom align='center' sx={{fontFamily: 'Oxygen, sans-serif'}}>
             Fan Art Archive
           </Typography>
-          <Button href="/art" variant="contained">Go To Art Page</Button>
+          <Button href='/art' variant='contained'>Go To Art Page</Button>
         </Stack>
       </Container>
     </Paper>
